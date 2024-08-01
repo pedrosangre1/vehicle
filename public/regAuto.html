@@ -5,9 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Car</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .header {
+          background-color: #007bff01;
+          color: rgb(39, 30, 30);
+          padding: 10px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        .header img {
+          max-height: 50px;
+        }
+        .sidebar {
+          height: 100vh;
+          position: fixed;
+          top: 50;
+          left: 0;
+          width: 250px;
+          background-color: #f8f9fa;
+          padding-top: 60px;
+        }
+        .sidebar a {
+          padding: 15px;
+          text-decoration: none;
+          font-size: 18px;
+          color: #007bff;
+          display: block;
+        }
+        .sidebar a:hover {
+          background-color: #ddd;
+        }
+        .content {
+          margin-left: 250px;
+          padding: 20px;
+        }
+      </style>
+    
 </head>
 <body>
-    <div class="container">
+    
+  <div class="header">
+    <img src="logo.png" alt="Logo">
+    <div id="usernameDisplay"></div>
+  </div>
+
+  <div class="sidebar">
+    <a href="regAuto.html">Register Auto</a>
+    <a href="regUser.html">Register User</a>
+    <a href="#menu1">Menu 1</a>
+    <a href="#menu2">Menu 2</a>
+    <a href="#menu3">Menu 3</a>
+  </div>
+    <div class="content">
+    <div class="container mt-5">
         <h2>Добавяне на автомобил</h2>
         <form id="carForm">
             <div class="form-group">
@@ -37,6 +88,7 @@
             <button type="submit" class="btn btn-primary">Добавяне</button>
         </form>
         <div id="result"></div>
+    </div>
     </div>
     <script src="script.js"></script>
 </body>
