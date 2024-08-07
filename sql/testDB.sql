@@ -65,8 +65,9 @@ CREATE TABLE carmodel (
 DROP TABLE IF EXISTS users;
 CREATE TABLE users (
     user_id SERIAL PRIMARY KEY,
-    user_name VARCHAR,
-    user_email VARCHAR,
+    name VARCHAR,
+    email VARCHAR,
+    password VARCHAR,
     cretad DATE,
     modify DATE
 );
@@ -83,6 +84,5 @@ DROP TABLE IF EXISTS items;
     stoinost INTEGER
     
  );
-
 
 
