@@ -20,7 +20,7 @@ CREATE TABLE vehicle (
     carmark_id INTEGER,
     carmodel_id INTEGER,
     transport_id INTEGER,
-    regno VARCHAR(10),
+    regno VARCHAR(8),
     win VARCHAR(25),
     motor_no VARCHAR(25),
     reg_year INTEGER,
