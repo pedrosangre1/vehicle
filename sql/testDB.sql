@@ -20,36 +20,37 @@ CREATE TABLE vehicle (
     carmark_id INTEGER,
     carmodel_id INTEGER,
     transport_id INTEGER,
-    regno VARCHAR(50),
-    win VARCHAR(50),
-    motor_no VARCHAR(50),
+    regno VARCHAR(10),
+    win VARCHAR(25),
+    motor_no VARCHAR(25),
     reg_year INTEGER,
-    modify TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    modified TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     city VARCHAR(100),
     axes_number INTEGER,
     fuel VARCHAR(50),
     motor_capacity INTEGER,
-    power_kw INTEGER,
-    power_hp INTEGER,
-    max_mass_camp INTEGER,
-    bruto_ton INTEGER,
-    katalizator BOOLEAN,
+    power_kw real,
+    power_hp real,
+    max_mass_camp real,
+    bruto_ton real,
+    EURO_CAT VARCHAR(20),
     user_date DATE,
     user_id INTEGER,
-    max_posible_mass INTEGER
+    max_posible_mass real,
+    isactive BOOLEAN
 );
 
 DROP TABLE IF EXISTS transport;
 CREATE TABLE transport (
     transport_id SERIAL PRIMARY KEY,
-    transport_na INTEGER,
+    transport_name VARCHAR (50),
     isactive BOOLEAN
 );
 
 DROP TABLE IF EXISTS carmark;
 CREATE TABLE carmark (
     carmark_id SERIAL PRIMARY KEY,
-    markname VARCHAR,
+    markname VARCHAR (50),
     transport_id INTEGER
 );
 
@@ -68,21 +69,22 @@ CREATE TABLE users (
     name VARCHAR,
     email VARCHAR,
     password VARCHAR,
-    cretad DATE,
-    modify DATE
+    createdt_ad DATE,
+    modified DATE,
+    isactive BOOLEAN
 );
 
 DROP TABLE IF EXISTS items;
  CREATE TABLE items(
+   items_id INTEGER,
     user_id INTEGER,
     vehicle_id INTEGER,
-    datafrom DATE,
-    datato DATE,
+    date_from DATE,
+    date_to DATE,
     probeg INTEGER,
     opisaninie VARCHAR,
     item VARCHAR,
-    stoinost INTEGER
+    stoinost real
     
  );
-
 
